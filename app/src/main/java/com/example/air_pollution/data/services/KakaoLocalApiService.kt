@@ -1,6 +1,8 @@
 package com.example.air_pollution.data.services
 
 import com.example.air_pollution.BuildConfig
+import com.example.air_pollution.data.services.tmcoodinates.TmcoodinatesResponse
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Headers
 import retrofit2.http.Query
@@ -13,5 +15,5 @@ interface KakaoLocalApiService {
     suspend fun getTmCoordinates(
         @Query("x") longitude: Double,
 
-        )
+        ):Response<TmcoodinatesResponse>
 }
